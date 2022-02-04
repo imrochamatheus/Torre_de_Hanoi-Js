@@ -1,0 +1,286 @@
+
+.container {
+    column-gap: 4px;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    background: linear-gradient(0deg, rgba(223,223,255,1) 0%, rgba(110,159,255,1) 100%);
+}
+
+.moves-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    grid-column: 1;
+    color: #ffffff;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Short Stack', cursive;
+}
+
+.cloud {
+    position: absolute;
+    width: 31%;
+}
+
+.cloud-1 {
+    left: 0;
+    top: 100px;
+}
+
+.cloud-2 {
+    left: 30%;
+}
+
+.cloud-3 {
+    right: 0;
+}
+
+.moves-container h2 {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+.moves-container h1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.victory_feedback {
+    width: 100%;
+    top: 150px;
+    text-align: center;
+    grid-column: span 3;
+    position: absolute;
+    background: transparent;
+    z-index: 9999;
+    color: rgba(0, 128, 0, .6);
+    font-family: 'Short Stack', cursive;
+}
+
+.victory_feedback h1 {
+    font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.d-none {
+    display: none
+}
+
+ul {
+    height: auto;
+    margin-bottom: 100px;
+    transform: rotateX(3.142rad);
+    background-image: url(../images/stick.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:  20px 150px;
+}
+
+.block {
+    height: 25px;
+    transition: 1s;
+    margin: 2px auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.shadow {
+    box-shadow: 0 0 25px 10px #ffffff;
+}
+
+.block-0 {
+    background: linear-gradient(90deg, rgba(48,148,24,1) 0%, rgba(124,219,24,1) 47%, rgba(48,148,24,1) 100%);
+    width: 100%;
+}
+
+.block-1 {
+    background: linear-gradient(90deg, rgba(24,43,161,1) 0%, rgba(24,106,219,1) 47%, rgba(24,37,148,1) 100%);
+    width: 85%;
+}
+
+.block-2 {
+    background: linear-gradient(90deg, rgba(179,49,49,1) 0%, rgba(203,25,79,1) 50%, rgba(148,24,51,1) 100%);
+    width: 70%;
+}
+
+.block-3 {
+    background: linear-gradient(90deg, rgba(159,156,48,1) 0%, rgba(203,201,25,1) 50%, rgba(148,138,24,1) 100%);
+    width: 55%;
+}
+
+.block-4 {
+    background: linear-gradient(90deg, rgba(122,21,119,1) 0%, rgba(174,25,203,1) 50%, rgba(126,32,104,1) 100%);
+    width: 40%;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    grid-column: span 3;
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    background-image: url(../images/field.jpg);
+}
+
+.change-difficulty-button {
+    display: block;
+    margin: 20px auto;
+    background: #6e9fff;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 6px 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: 'Short Stack', cursive;
+}
+
+.reset-button {
+    display: block;
+    margin: 20px auto;
+    background: #6e9fff;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 6px 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: 'Short Stack', cursive;
+}
+
+.popup-wrapper {
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    font-family: 'Short Stack', cursive;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border-radius: 15px;
+}
+
+.popup-content {
+    padding: 8px;
+}
+
+.popup-content h2 {
+    line-height: 24px;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.popup-content ol {
+    margin-bottom: 24px;
+}
+
+.popup-content ol li{
+    padding: 4px 8px;
+    height: 20px;
+    cursor: pointer;
+    margin: 4px 0;
+    background-color: #6e9fff;
+    color: #ffffff;
+}
+
+.popup-content ol li:hover {
+    transform: scale(1.01);
+}
+
+.popup a {
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: crimson;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-header {
+    background: gray;
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    .victory_feedback h1 {
+        font-size: 80px;
+     }
+
+    .cloud{
+      width: 20%;
+    }
+
+    .cloud-1 {
+        width: 10%;
+        top: 100px;
+    }
+
+    .cloud-3 {
+        right: 10%;
+    }
+
+    ul {
+        background-size: 30px 250px;
+    }
+
+    .block {
+        height: 40px;
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+    .block-0 {
+        width: 90%;
+    }
+    
+    .block-1 {
+        width: 75%;
+    }
+    
+    .block-2 {
+        width: 60%;
+    }
+    
+    .block-3 {
+        width: 45%;
+    }
+    
+    .block-4 {
+        width: 30%;
+    }
+
+    .reset-button, .change-difficulty-button {
+        bottom: -8px
+    }
+}
