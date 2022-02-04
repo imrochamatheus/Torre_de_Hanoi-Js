@@ -1,10 +1,9 @@
-
 .container {
     column-gap: 4px;
     bottom: 0;
     width: 100%;
     display: grid;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     grid-template-columns: repeat(3, 1fr);
     background: linear-gradient(0deg, rgba(223,223,255,1) 0%, rgba(110,159,255,1) 100%);
@@ -14,6 +13,7 @@
     width: 100px;
     height: 100px;
     display: flex;
+    top: 200px;
     grid-column: 1;
     color: #ffffff;
     position: absolute;
@@ -235,7 +235,7 @@ ul {
     
     .victory_feedback h1 {
         font-size: 80px;
-     }
+    }
 
     .cloud{
       width: 20%;
